@@ -2,7 +2,7 @@ Sample project using Maven Gatling plugin
 =========================
 
 ## Structure 
-Project is separated on Requests, Scenarious and Simulations. Simulation is the highest element in the project hierarchy which includes Scenarious and Requests. 
+Project is separated on Requests, Scenarios and Simulations. Simulation is the highest element in the project hierarchy which includes Scenarios and Requests. 
 
 ## Running
 For running of tests execute the following command:
@@ -14,4 +14,7 @@ or simply:
     $mvn gatling:test
 
 ## Reports 
-Variuos reports based on test results can be found in `target/gatling/<testRunName>/index.html`
+Various reports based on test results can be found in `target/gatling/<testRunName>/index.html`
+
+## Debugging
+For proper debugging of Gatling test run it is recommended to use Proxy: Fiddler, Charles, Mitmproxy. Sample project contains proxy settings forwarding to `8080` port
