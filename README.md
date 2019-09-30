@@ -17,4 +17,4 @@ or simply:
 Various reports based on test results can be found in `target/gatling/<testRunName>/index.html`
 
 ## Debugging
-For proper debugging of Gatling test run it is recommended to use Proxy: Fiddler, Charles, Mitmproxy. Sample project contains proxy settings forwarding to `8080` port
+For proper debugging of Gatling test run it is recommended to use proxy: Fiddler, Charles, Mitmproxy. Sample project contains proxy settings forwarding to `8080` port
