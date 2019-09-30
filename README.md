@@ -12,3 +12,6 @@ For running of tests execute the following command:
 or simply:
 
     $mvn gatling:test
+
+## Reports 
+Variuos reports based on test results can be found in `target/gatling/<testRunName>/index.html`
