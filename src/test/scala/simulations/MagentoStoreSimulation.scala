@@ -18,7 +18,8 @@ class MagentoStoreSimulation extends Simulation {
   private val createUserExec = RegisterNewUserScenario.createUserScenario.inject(atOnceUsers(Config.users), rampUsers(Config.rampUp) during (20 seconds)) // example of ramp-up
   private val visitCategoryExec = OpenCategoryPageScenario.openCategoryPage.inject(heavisideUsers(10) during (1 minutes)) // example of smooth adding of users
   private val addProductExec = AddProductToCartScenario.addProductScenario.inject(atOnceUsers(Config.users)) // example of adding a number of users at once
-  private val openCartWithProduct = OpenShoppingCartWithProductScenario.openShoppingCartScenario.inject(atOnceUsers(Config.users))
+  private val openCartWithProductExec = OpenShoppingCartWithProductScenario.openShoppingCartScenario.inject(atOnceUsers(Config.users))
+  private val performCheckoutExec = PerformCheckoutActionScenario.performCheckoutAction.inject(atOnceUsers(Config.users))
 
-  setUp(createUserExec.protocols(httpProtocol), openCartWithProduct.protocols(httpProtocol)).maxDuration(21 minutes)
+  setUp(performCheckoutExec.protocols(httpProtocol)).maxDuration(21 minutes)
 }
